@@ -15,19 +15,19 @@ mkdir -p /root/tmp
 cd /root/tmp
 
 if [ "${1}" == "A" ]; then
-    DATA_URL=https://s3.amazonaws.com/719-project2-east1/kdd10.gz
+    DATA_URL=https://s3.amazonaws.com/cmucc-datasets/kdd10.gz
     LOCAL_ZIP_PATH=kdd10.gz
     LOCAL_UNZIP_PATH=kdd10
     UNZIP_CMD="gunzip -f -k > ${LOCAL_UNZIP_PATH}"
     HDFS_PATH=/kdd10
 elif [ "${1}" == "B" ]; then
-    DATA_URL=https://s3.amazonaws.com/719-project2-east1/kdd12.gz
+    DATA_URL=https://s3.amazonaws.com/cmucc-datasets/kdd12.gz
     LOCAL_ZIP_PATH=kdd12.gz
     LOCAL_UNZIP_PATH=kdd12
     UNZIP_CMD="gunzip -f -k > ${LOCAL_UNZIP_PATH}"
     HDFS_PATH=/kdd12
 else
-    DATA_URL=https://s3.amazonaws.com/719-project2-east1/criteo_4percent_719proj2.tar.gz
+    DATA_URL=https://s3.amazonaws.com/cmucc-datasets/criteo_4percent_719proj2.tar.gz
     LOCAL_ZIP_PATH=criteo_4percent_719proj2.tar.gz
     LOCAL_UNZIP_PATH=criteo_4percent_719proj2
     UNZIP_CMD="tar zxf -"
