@@ -71,7 +71,7 @@ def gd_partition(samples):
         pred = sigmoid(feature_vals.dot(local_weights))
         diff = label - pred
         # the L2-regularlized gradients
-        gradient = diff * feature_vals + reg_param * local_weights
+        gradient = diff * feature_vals - reg_param * local_weights
         sample_update = step_size * gradient
 
         for i in range(0, feature_ids.size):
