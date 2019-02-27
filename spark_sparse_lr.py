@@ -136,7 +136,7 @@ if __name__ == "__main__":
         weights_array_bc.destroy()
         weights_array += updates.toarray().squeeze()
         # decay step size to ensure convergence
-        step_size *= 0.95
+        step_size *= step_size_decay
         print "iteration: %d, cross-entropy loss: %f" % (iteration, loss)
 
     # write the cross-entropy loss to a local file
