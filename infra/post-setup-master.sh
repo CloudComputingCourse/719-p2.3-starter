@@ -91,7 +91,7 @@ format_and_mount_disk() {
 setup() {
   sudo yum update -y
   sudo yum install git libcurl python3 -y
-  pip3 install --user warc3-wet beautifulsoup4 requests
+  pip3 install --user warc3-wet beautifulsoup4 requests numpy
   echo "export PYSPARK_PYTHON='/usr/bin/python3'" >> .bash_profile
   export PYSPARK_PYTHON='/usr/bin/python3'
   format_and_mount_disk /dev/xvdp
