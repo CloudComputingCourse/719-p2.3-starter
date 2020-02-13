@@ -83,8 +83,8 @@ def gd_partition(samples):
         else:
             cross_entropy_loss -= safe_log(1 - pred)
     accumulated_updates = sps.csr_matrix(\
-                                         (local_updates.values(), \
-                                          local_updates.keys(), \
+                                         (np.fromiter(local_updates.values(), dtype=np.int), \
+                                          np.fromiter(local_updates.keys(), dtype=np.float), \
                                           [0, len(local_updates)]), \
                                          shape=(1, num_features))
     return [(cross_entropy_loss, accumulated_updates)]
