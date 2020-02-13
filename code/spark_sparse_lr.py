@@ -22,7 +22,6 @@ import numpy as np
 import math
 from datetime import datetime
 import scipy.sparse as sps
-import string
 from collections import defaultdict
 
 # parse a line of the training data file to produce a data sample record
@@ -137,10 +136,10 @@ if __name__ == "__main__":
         weights_array += updates.toarray().squeeze()
         # decay step size to ensure convergence
         step_size *= step_size_decay
-        print "iteration: %d, cross-entropy loss: %f" % (iteration, loss)
+        print("iteration: %d, cross-entropy loss: %f" % (iteration, loss))
 
     # write the cross-entropy loss to a local file
     with open(loss_file, "w") as loss_fobj:
         for loss in loss_list:
             loss_fobj.write(str(loss) + "\n")
-    print loss_list
+    print(loss_list)
