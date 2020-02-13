@@ -27,7 +27,7 @@ setup_cluster() {
 
   flintrock --config $CONFIG_PATH launch $CLUSTER_NAME
   flintrock describe $CLUSTER_NAME --master-hostname-only > ~/.spark_master
-  flintrock run-command $CLUSTER_NAME --ec2-identity-file $PEM_PATH --ec2-user ec2-user 'pip3 install numpy scipy'
+  flintrock run-command --ec2-identity-file $PEM_PATH --ec2-user ec2-user $CLUSTER_NAME 'pip3 install numpy scipy --user'
   python3.7 spark_attach_vol.py --cluster-name $CLUSTER_NAME --size $DATA_CACHE_SIZE
 
   SPARK_MASTER=ec2-user@`cat ~/.spark_master`
