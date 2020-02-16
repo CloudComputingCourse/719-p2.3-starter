@@ -30,12 +30,15 @@ elif [ "${1}" == "B" ]; then
     HDFS_PATH=/kdd12
     DATA_SIZE=22475194880
 else
-    DATA_URL=https://s3.amazonaws.com/cmucc-datasets/criteo_4percent_719proj2.tar.gz
-    LOCAL_ZIP_PATH=criteo_4percent_719proj2.tar.gz
-    LOCAL_UNZIP_PATH=criteo_4percent_719proj2
+    #DATA_URL=https://s3.amazonaws.com/cmucc-datasets/criteo_4percent_719proj2.tar.gz
+    DATA_URL=https://s3.amazonaws.com/cmucc-datasets/criteo_4percent_719proj2.micro.tar.gz
+    LOCAL_ZIP_PATH=criteo_4percent_719proj2.micro.tar.gz
+    #LOCAL_UNZIP_PATH=criteo_4percent_719proj2
+    LOCAL_UNZIP_PATH=criteo.micro
     UNZIP_CMD="tar zxf -"
     HDFS_PATH=/criteo
-    DATA_SIZE=38273141584
+    #DATA_SIZE=38273141584
+    DATA_SIZE=26792140151
 fi
 
 if [ -f $LOCAL_UNZIP_PATH ]; then
