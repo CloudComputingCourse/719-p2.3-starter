@@ -1,5 +1,5 @@
 # 719-p2.3-starter
-The starter package for 15-719/18-709 (Spring 2019) Project 2, part 3.
+The starter package for 15-719/18-709 (Spring 2020) Project 2, part 3.
 - `submit` is used to run test for grading and submit your solution. Run it as `./submit <code-path> <test-id>`, the arguments are:
   - `<code-path>` is the local directory that contains your driver program and the `run.sh` script. It should contain nothing else.
   - `<test-id>` is the single letter (A, B, C) that identifies each test case described above. Please make sure the number of slave instances match the test specification or your grading will fail.
